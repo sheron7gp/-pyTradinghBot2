@@ -10,10 +10,11 @@ gate = ccxt.gate({
 
 symbols = 'RIN/USDT'
 size = 1.33
-#bid = 0.1185
+bid = 0.1185
 
-#order = gate.create_limit_buy_order(symbols, size, bid)
-order = gate.create_market_buy_order(symbols, size )
+
+order = gate.create_limit_buy_order(symbols, size, bid)
+
 print(order)
 
 
