@@ -8,12 +8,12 @@ gate = ccxt.gate({
     'secret': config.GATE_SECRET_KEY
 })
 
-symbols = 'rin_usdt'
+symbol = 'RIN/USDT'  # 'rin_usdt  'RIN_USDT' '
 size = 1.33
 #bid = 0.1185
 
 
-gate.create_market_buy_order(symbols, size )
+order = gate.create_market_buy_order(symbol, size )
 print(order)
 
 
