@@ -9,5 +9,6 @@ exchange = ccxt.gate({
 
 balance = exchange.fetch_balance()
 
-print(balances['total']['RIN'])
-print(balances['total']['USDT'])
+print(balance)
+#print(balances['total']['RIN'])
+#print(balances['total']['USDT'])
