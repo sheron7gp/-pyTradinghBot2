@@ -1,20 +1,12 @@
-import time
-import os
 import ccxt
-#import dontshare_config
-from dotenv import load_dotenv
+import config
 
 
-def configure():
-    load_dotenv()
 
-
-gate = ccxt.gate({
-    'enbaleRateLimit': True,
-    'apiKey': os.getenv('apiKey'),
-    'secret': os.getenv('secret'),
+exchange = ccxt.gate({
+    'apiKey': config.GATE_API_KEY,
+    'secret': config.GATE_SECRET_KEY
 })
-
 
 markets = gate.load_markets()
 print(markets)
